@@ -1706,7 +1706,7 @@ sd_image_t* txt2img(sd_ctx_t* sd_ctx,
 
     struct ggml_tensor* uc        = NULL;
     struct ggml_tensor* uc_vector = NULL;
-    if (cfg_scale != 1.0) {
+    if (cfg_scale != 1.0 && !(sd_ctx->sd->version == VERSION_XL && negative_prompt.size() == 0)) {
         bool force_zero_embeddings = false;
         if (sd_ctx->sd->version == VERSION_XL && negative_prompt.size() == 0) {
             force_zero_embeddings = true;

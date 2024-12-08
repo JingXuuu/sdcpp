@@ -1,3 +1,4 @@
 [submodule "ggml"]
     path = ggml
-	url = https://github.com/ggerganov/ggml.git
+	url = https://github.com/JingXuuu/ggml.git
+	branch = master
